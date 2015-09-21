@@ -23,4 +23,12 @@ public class GameStateManager{
 	public int getState(){
 		return this.currentState;
 	}
+	
+	public void keyReleased(int k) {
+		gameStates.get(currentState).keyReleased(k);
+	}
+	
+	public void keyPressed(int k) {
+		gameStates.get(currentState).keyPressed(k);
+	}
 }
