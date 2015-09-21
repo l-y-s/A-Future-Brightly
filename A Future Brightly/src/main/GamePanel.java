@@ -9,8 +9,8 @@ import javax.swing.JPanel;
 import gameState.GameStateManager;
 
 public class GamePanel extends JPanel implements Runnable, KeyListener {
-	public static final int WIDTH = 500;
-	public static final int HEIGHT = 500;
+	public static final int WIDTH = 425;
+	public static final int HEIGHT = 300;
 	public static final int SCALE = 2;
 	
 	private Thread thread;
