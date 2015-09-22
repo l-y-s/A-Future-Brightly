@@ -23,13 +23,8 @@ public class IntroState extends GameState {
 	}
 	
 	public void keyPressed(int k) {
-		/*if (k == KeyEvent.VK_ENTER) {
-			//Placeholder to print text until EOF
-		}
-		if (k == KeyEvent.VK_Y) {
-			
-		}*/
 		switch(k) {
+		
 		case KeyEvent.VK_ENTER:
 			//Placeholder to print text until EOF
 			break;
