@@ -2,13 +2,17 @@ package gameState;
 
 import java.util.ArrayList;
 
+import main.GamePanel;
+
 public class GameStateManager{
 	private ArrayList<GameState> gameStates;
 	private int currentState;
+	private GamePanel gp; 
 	
 	public static final int INTROSTATE = 0;
 	
-	public GameStateManager(){
+	public GameStateManager(GamePanel textPanel){
+		gp = textPanel;
 		gameStates = new ArrayList<GameState>();
 		currentState = INTROSTATE;
 		
@@ -22,6 +26,10 @@ public class GameStateManager{
 	
 	public int getState(){
 		return this.currentState;
+	}
+	
+	public GamePanel getGP() {
+		return this.gp;
 	}
 	
 	public void keyReleased(int k) {

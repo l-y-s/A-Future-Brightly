@@ -1,23 +1,26 @@
 package main;
 
+//Allows for manipulation of files
 import java.io.File;
 import java.io.IOException;
 
-import javax.imageio.ImageIO;
-import javax.swing.JFrame;
+import javax.imageio.ImageIO;	//Allows for image IO for backgrounds and icons
+import javax.swing.JFrame; //Allows for creation of JFrame
 
 public class Game{
 	
 	public static void main(String[] args){
 		JFrame window = new JFrame("A Future Brightly");
-		window.setContentPane(new GamePanel());
+		GamePanel textPanel = new GamePanel();
+		textPanel.setEditable(false);
+		window.setContentPane(textPanel);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setResizable(false);
 		window.pack();
 		window.setLocationRelativeTo(null);
 		
 		try{
-			window.setIconImage(ImageIO.read(new File("Resources/Backgrounds/[TBD]")));
+			window.setIconImage(ImageIO.read(new File("Resources/Icons/Heart Icon.png")));
 		}
 		catch(IOException e){
 			e.printStackTrace();
