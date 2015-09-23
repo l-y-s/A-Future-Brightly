@@ -4,15 +4,18 @@ import gameState.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class IntroState extends GameState {
 	
 	//Construct IntroState
 	public IntroState(GameStateManager gsm) {
 		this.gsm = gsm; //Stores reference to gsm
-		this.background = "Resources/Backgrounds/Blue Background.jpg"; //Stores background location
+		this.backgroundLoc = "Resources/Backgrounds/Blue Background.jpg"; //Stores background location
+		this.textLoc = "Resources/Game State Texts/Intro.txt";
 		try {
-			gsm.getGP().setBG(background); //Set background of GamePanel to current state background
+			gsm.getGP().setBG(backgroundLoc); //Set background of GamePanel to current state background
 			init();
 		} catch(Exception e){
 			e.printStackTrace();
@@ -20,6 +23,11 @@ public class IntroState extends GameState {
 	}
 	
 	public void init() {
+		try {
+			this.br = new BufferedReader(new FileReader(textLoc));
+		} catch(Exception e){
+			e.printStackTrace();
+		}
 		gsm.getGP().append("Test text\n");
 		gsm.getGP().append("More test text\n");
 	}
@@ -29,7 +37,16 @@ public class IntroState extends GameState {
 		switch(k) {
 		
 		case KeyEvent.VK_ENTER:		//Reads and prints next line from text file until EOF
-			//Placeholder
+			try {
+				String line = br.readLine();
+				line = line + "\n";
+				if (line != null) {
+					gsm.getGP().append(line);
+				}
+				else {}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			break;
 		case KeyEvent.VK_Y: 		//Temporary keypress, currently used to test string appending
 			//Placeholder
