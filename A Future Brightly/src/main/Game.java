@@ -11,22 +11,28 @@ import javax.swing.JScrollPane;
 public class Game{
 	
 	public static void main(String[] args){
-		JFrame window = new JFrame("A Future Brightly");
+		JFrame window = new JFrame("A Future Brightly"); //Creates new JFrame
+		
+		//Creates new GamePanel sets properties
 		GamePanel textPanel = new GamePanel();
 		textPanel.setEditable(false);
-		JScrollPane scroll = new JScrollPane(textPanel);
+		
+		JScrollPane scroll = new JScrollPane(textPanel); //Creates new JScrollPane to allow GamePanel to scroll
+		
+		//Set JFrame properties
 		window.setContentPane(scroll);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setResizable(false);
 		window.pack();
 		window.setLocationRelativeTo(null);
 		
+		//Sets window icon
 		try{
 			window.setIconImage(ImageIO.read(new File("Resources/Icons/Heart Icon.png")));
 		}
 		catch(IOException e){
 			e.printStackTrace();
 		}
-		window.setVisible(true);
+		window.setVisible(true); //Makes window visible
 	}
 }
