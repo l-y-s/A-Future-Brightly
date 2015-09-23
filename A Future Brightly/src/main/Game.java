@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;	//Allows for image IO for backgrounds and icons
 import javax.swing.JFrame; //Allows for creation of JFrame
+import javax.swing.JScrollPane;
 
 public class Game{
 	
@@ -13,7 +14,8 @@ public class Game{
 		JFrame window = new JFrame("A Future Brightly");
 		GamePanel textPanel = new GamePanel();
 		textPanel.setEditable(false);
-		window.setContentPane(textPanel);
+		JScrollPane scroll = new JScrollPane(textPanel);
+		window.setContentPane(scroll);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setResizable(false);
 		window.pack();

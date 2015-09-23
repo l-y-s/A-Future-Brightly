@@ -6,11 +6,12 @@ import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 public class IntroState extends GameState {
-	private String out = null;
 	
 	public IntroState(GameStateManager gsm) {
 		this.gsm = gsm;
+		background = "Resources/Backgrounds/Blue Background.jpg";
 		try {
+			gsm.getGP().setBG(background);
 			init();
 		} catch(Exception e){
 			e.printStackTrace();
@@ -30,6 +31,7 @@ public class IntroState extends GameState {
 			break;
 		case KeyEvent.VK_Y:
 			//Placeholder
+			gsm.getGP().append("This will appear if it works.\n");
 			break;
 		}
 	}

@@ -18,6 +18,8 @@ public class GamePanel extends JEditorPane implements KeyListener {
 	public static final int HEIGHT = 300;
 	public static final int SCALE = 2;
 	
+	private String background = null;
+	
 	private GameStateManager gsm;
 	
 	public GamePanel() {
@@ -32,7 +34,7 @@ public class GamePanel extends JEditorPane implements KeyListener {
 	protected void paintComponent(Graphics g) {
 		BufferedImage image = null;
 		try{
-			image = ImageIO.read(new File("Resources/Backgrounds/Blue Background.jpg"));
+			image = ImageIO.read(new File(background));
 			g.drawImage(image, 0, 0, (int) getSize().getWidth(), (int) getSize().getHeight(), this);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -40,10 +42,17 @@ public class GamePanel extends JEditorPane implements KeyListener {
 		super.paintComponent(g);
 	}
 	
+	public void setBG(String loc) {
+		background = loc;
+		Graphics2D g = (Graphics2D) this.getGraphics();
+		this.paint(g);
+	}
+	
 	public void append(String s) {
 		try{
 			Document doc = this.getDocument();
 			doc.insertString(doc.getLength(),  s, null);
+			this.setCaretPosition(doc.getLength());
 		} catch(BadLocationException exc) {
 			exc.printStackTrace();
 		}
