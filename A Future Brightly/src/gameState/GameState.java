@@ -17,4 +17,18 @@ public abstract class GameState {
 	public abstract void keyPressed(int k);
 	public abstract void keyReleased(int k);
 	
+	public void outputLines(BufferedReader br) {
+		try {
+			String line = br.readLine();
+			if (line != null) {
+				line = line + "\n";
+				gsm.getGP().append(line);
+			}
+			else {
+				br.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

@@ -38,19 +38,10 @@ public class IntroState extends GameState {
 		switch(k) {
 		
 		case KeyEvent.VK_ENTER:		//Reads and prints next line from text file until EOF
-			try {
-				String line = br.readLine();
-				if (line != null) {
-					line = line + "\n";
-					gsm.getGP().append(line);
-				}
-				else {
-					br.close();
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+			
+			outputLines(br);
 			break;
+			
 		case KeyEvent.VK_Y: 		//Temporary keypress, currently used to test string appending
 			//Placeholder
 			gsm.getGP().append("This will appear if it works.\n");
