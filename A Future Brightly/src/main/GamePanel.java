@@ -5,6 +5,7 @@ import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.File;
+import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.JEditorPane;
@@ -20,7 +21,7 @@ public class GamePanel extends JEditorPane implements KeyListener {
 	public static final int HEIGHT = 300;
 	public static final int SCALE = 2;
 	
-	private String background = null; //Stores background location
+	private URL background; //Stores background location
 	
 	private GameStateManager gsm; //Stores gsm reference
 	
@@ -38,7 +39,7 @@ public class GamePanel extends JEditorPane implements KeyListener {
 	protected void paintComponent(Graphics g) {
 		BufferedImage image = null;
 		try{
-			image = ImageIO.read(new File(background)); //Read image into buffer
+			image = ImageIO.read(background); //Read image into buffer
 			g.drawImage(image, 0, 0, (int) getSize().getWidth(), (int) getSize().getHeight(), this); //Draw background to fit GamePanel
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -47,7 +48,7 @@ public class GamePanel extends JEditorPane implements KeyListener {
 	}
 	
 	//Setter for background image, called by individual GameStates
-	public void setBG(String loc) {
+	public void setBG(URL loc) {
 		background = loc;
 		Graphics2D g = (Graphics2D) this.getGraphics(); //Creates Graphics2D object of current window graphics
 		this.paint(g); //Repaints the window (not supposed to be called directly, but still works)

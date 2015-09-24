@@ -1,19 +1,21 @@
 package gameState;
 
 import gameState.*;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.InputStreamReader;
 
 public class IntroState extends GameState {
 	
 	//Construct IntroState
 	public IntroState(GameStateManager gsm) {
 		this.gsm = gsm; //Stores reference to gsm
-		this.backgroundLoc = "Resources/Backgrounds/Blue Background.jpg"; //Stores background location
-		this.textLoc = "Resources/Game State Texts/Intro.txt";
+		this.backgroundLoc = getClass().getResource("/Backgrounds/Blue Background.jpg"); //Stores background location
+		this.textLoc = getClass().getResource("/Game State Texts/Intro.txt");
 		try {
 			gsm.getGP().setBG(backgroundLoc); //Set background of GamePanel to current state background
 			init();
@@ -24,12 +26,11 @@ public class IntroState extends GameState {
 	
 	public void init() {
 		try {
-			this.br = new BufferedReader(new FileReader(textLoc));
+			this.br = new BufferedReader(new InputStreamReader(textLoc.openStream()));
 		} catch(Exception e){
 			e.printStackTrace();
 		}
-		gsm.getGP().append("Test text\n");
-		gsm.getGP().append("More test text\n");
+		gsm.getGP().append("Welcome to \"A Future Brightly\", an Interactive Fiction game produced by Logan Schmidt (press enter to scroll through text).\n");
 	}
 	
 	//Keylisteners
