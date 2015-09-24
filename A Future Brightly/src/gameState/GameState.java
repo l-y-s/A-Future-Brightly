@@ -3,7 +3,6 @@ package gameState;
 import java.io.BufferedReader;
 import java.net.URL;
 
-import javax.swing.text.Document;
 import javax.swing.text.PlainDocument;
 
 //Abstract GameState

@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.io.File;
 import java.net.URL;
 
 import javax.imageio.ImageIO;
@@ -14,6 +13,7 @@ import javax.swing.text.Document;
 
 import gameState.GameStateManager;
 
+@SuppressWarnings("serial")
 public class GamePanel extends JEditorPane implements KeyListener {
 	
 	//Static window dimensions

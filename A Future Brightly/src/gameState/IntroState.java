@@ -1,12 +1,8 @@
 package gameState;
 
-import gameState.*;
 
-import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.InputStreamReader;
 
 public class IntroState extends GameState {
