@@ -14,7 +14,7 @@ public class HighSchoolState extends GameState {
 	//Construct HighSchoolState
 	public HighSchoolState(GameStateManager gsm) {
 		this.gsm = gsm;
-		this.backgroundLoc = getClass().getResource("/Backgrounds/Green Background.jpg");
+		this.backgroundLoc = getClass().getResource("/Backgrounds/HighSchool.jpg");
 		this.textLoc = getClass().getResource("/Game State Texts/Intro.txt");
 	}
 	

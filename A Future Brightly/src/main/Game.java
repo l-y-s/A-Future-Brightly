@@ -28,7 +28,7 @@ public class Game{
 		
 		//Sets window icon
 		try{
-			window.setIconImage(ImageIO.read(new File("Resources/Icons/Heart Icon.png")));
+			window.setIconImage(ImageIO.read(new File("Resources/Icons/Heart.png")));
 		}
 		catch(IOException e){
 			e.printStackTrace();

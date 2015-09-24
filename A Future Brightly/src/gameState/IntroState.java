@@ -14,7 +14,7 @@ public class IntroState extends GameState {
 	//Construct IntroState
 	public IntroState(GameStateManager gsm) {
 		this.gsm = gsm; //Stores reference to gsm
-		this.backgroundLoc = getClass().getResource("/Backgrounds/Blue Background.jpg"); //Stores background location from URL of image
+		this.backgroundLoc = getClass().getResource("/Backgrounds/Intro.jpg"); //Stores background location from URL of image
 		this.textLoc = getClass().getResource("/Game State Texts/Intro.txt"); //Stores text location from URL of file
 		init();
 	}
