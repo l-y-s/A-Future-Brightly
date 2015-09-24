@@ -39,11 +39,13 @@ public class IntroState extends GameState {
 		case KeyEvent.VK_ENTER:		//Reads and prints next line from text file until EOF
 			try {
 				String line = br.readLine();
-				line = line + "\n";
 				if (line != null) {
+					line = line + "\n";
 					gsm.getGP().append(line);
 				}
-				else {}
+				else {
+					br.close();
+				}
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

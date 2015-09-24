@@ -49,15 +49,16 @@ public class GamePanel extends JEditorPane implements KeyListener {
 	//Setter for background image, called by individual GameStates
 	public void setBG(String loc) {
 		background = loc;
-		Graphics2D g = (Graphics2D) this.getGraphics();
-		this.paint(g);
+		Graphics2D g = (Graphics2D) this.getGraphics(); //Creates Graphics2D object of current window graphics
+		this.paint(g); //Repaints the window (not supposed to be called directly, but still works)
 	}
 	
+	//Appends string to the GamePanel
 	public void append(String s) {
 		try{
-			Document doc = this.getDocument();
-			doc.insertString(doc.getLength(),  s, null);
-			this.setCaretPosition(doc.getLength());
+			Document doc = this.getDocument(); //Creates Document object of current text in GamePanel
+			doc.insertString(doc.getLength(),  s, null); //Inserts string at end of document
+			this.setCaretPosition(doc.getLength()); //Auto-scrolls GamePanel by setting caret position to bottom
 		} catch(BadLocationException exc) {
 			exc.printStackTrace();
 		}
@@ -67,15 +68,18 @@ public class GamePanel extends JEditorPane implements KeyListener {
 		gsm = new GameStateManager(this);
 	}
 	
+	//Adds keylisteners to GamePanel, honestly not sure how
 	public void addNotify() {
 		super.addNotify();
 			addKeyListener(this);
 	}
 	
+	//Keylisteners
 	public void keyTyped(KeyEvent key){
 	}
 	
 	public void keyPressed(KeyEvent key){
+		key.consume();
 		gsm.keyPressed(key.getKeyCode());
 	}
 	
