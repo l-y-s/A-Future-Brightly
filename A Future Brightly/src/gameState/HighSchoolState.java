@@ -11,18 +11,18 @@ import java.io.InputStreamReader;
 
 public class HighSchoolState extends GameState {
 	
-	//Construct HighSchoolState
+	//Construct HighSchoolState, sets resource locations
 	public HighSchoolState(GameStateManager gsm) {
 		this.gsm = gsm;
 		this.backgroundLoc = getClass().getResource("/Backgrounds/HighSchool.jpg");
-		this.textLoc = getClass().getResource("/Game State Texts/Intro.txt");
+		this.textLoc = getClass().getResource("/Texts/Intro.txt");
 	}
 	
 	public void init() {
 		try {
-			clearPanel();
-			gsm.getGP().setBG(backgroundLoc);
-			this.br = new BufferedReader(new InputStreamReader(textLoc.openStream()));
+			clearPanel(); //Clears GamePanel
+			gsm.getGP().setBG(backgroundLoc); //Sets background of GamePanel
+			this.br = new BufferedReader(new InputStreamReader(textLoc.openStream())); //Initialize BufferedReader
 		} catch(Exception e){
 			e.printStackTrace();
 		}

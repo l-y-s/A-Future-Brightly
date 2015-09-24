@@ -15,7 +15,7 @@ public class IntroState extends GameState {
 	public IntroState(GameStateManager gsm) {
 		this.gsm = gsm; //Stores reference to gsm
 		this.backgroundLoc = getClass().getResource("/Backgrounds/Intro.jpg"); //Stores background location from URL of image
-		this.textLoc = getClass().getResource("/Game State Texts/Intro.txt"); //Stores text location from URL of file
+		this.textLoc = getClass().getResource("/Texts/Intro.txt"); //Stores text location from URL of file
 		init();
 	}
 	
@@ -26,7 +26,7 @@ public class IntroState extends GameState {
 		} catch(Exception e){
 			e.printStackTrace();
 		}
-		gsm.getGP().append("Welcome to \"A Future Brightly\", an Interactive Fiction game produced by Logan Schmidt\n(press enter to scroll through text).\n");
+		gsm.getGP().append("Welcome to \"A Future Brightly\", an Interactive Fiction game produced by Logan Schmidt\n(press Enter to scroll through text).\n");
 	}
 	
 	//Keylisteners
