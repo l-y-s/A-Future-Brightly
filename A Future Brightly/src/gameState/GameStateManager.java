@@ -11,6 +11,7 @@ public class GameStateManager{
 	
 	//Static int references for each GameState
 	public static final int INTROSTATE = 0;
+	public static final int HIGHSCHOOL = 1;
 	
 	//Construct GameStateManager
 	public GameStateManager(GamePanel textPanel){
@@ -20,6 +21,7 @@ public class GameStateManager{
 		
 		//Instantiate each GameState on creation (may need to changed to handle dynamic creation due to branching)
 		gameStates.add(new IntroState(this)); //0
+		gameStates.add(new HighSchoolState(this));
 	}
 	
 	//Setter for changing GameStates

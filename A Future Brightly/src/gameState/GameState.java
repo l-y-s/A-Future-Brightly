@@ -3,6 +3,9 @@ package gameState;
 import java.io.BufferedReader;
 import java.net.URL;
 
+import javax.swing.text.Document;
+import javax.swing.text.PlainDocument;
+
 //Abstract GameState
 public abstract class GameState {
 
@@ -30,5 +33,9 @@ public abstract class GameState {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void clearPanel() {
+		gsm.getGP().setDocument(new PlainDocument());
 	}
 }

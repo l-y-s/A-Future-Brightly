@@ -16,21 +16,17 @@ public class IntroState extends GameState {
 		this.gsm = gsm; //Stores reference to gsm
 		this.backgroundLoc = getClass().getResource("/Backgrounds/Blue Background.jpg"); //Stores background location from URL of image
 		this.textLoc = getClass().getResource("/Game State Texts/Intro.txt"); //Stores text location from URL of file
-		try {
-			gsm.getGP().setBG(backgroundLoc); //Set background of GamePanel to current state background
-			init();
-		} catch(Exception e){
-			e.printStackTrace();
-		}
+		init();
 	}
 	
 	public void init() {
 		try {
+			gsm.getGP().setBG(backgroundLoc); //Set background of GamePanel to current state background
 			this.br = new BufferedReader(new InputStreamReader(textLoc.openStream())); //Creates Buffered Reader from text file
 		} catch(Exception e){
 			e.printStackTrace();
 		}
-		gsm.getGP().append("Welcome to \"A Future Brightly\", an Interactive Fiction game produced by Logan Schmidt (press enter to scroll through text).\n");
+		gsm.getGP().append("Welcome to \"A Future Brightly\", an Interactive Fiction game produced by Logan Schmidt\n(press enter to scroll through text).\n");
 	}
 	
 	//Keylisteners
@@ -44,7 +40,7 @@ public class IntroState extends GameState {
 			
 		case KeyEvent.VK_Y: 		//Temporary keypress, currently used to test string appending
 			//Placeholder
-			gsm.getGP().append("This will appear if it works.\n");
+			gsm.setState(GameStateManager.HIGHSCHOOL);
 			break;
 		}
 	}
