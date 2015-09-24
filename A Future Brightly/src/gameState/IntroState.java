@@ -14,8 +14,8 @@ public class IntroState extends GameState {
 	//Construct IntroState
 	public IntroState(GameStateManager gsm) {
 		this.gsm = gsm; //Stores reference to gsm
-		this.backgroundLoc = getClass().getResource("/Backgrounds/Blue Background.jpg"); //Stores background location
-		this.textLoc = getClass().getResource("/Game State Texts/Intro.txt");
+		this.backgroundLoc = getClass().getResource("/Backgrounds/Blue Background.jpg"); //Stores background location from URL of image
+		this.textLoc = getClass().getResource("/Game State Texts/Intro.txt"); //Stores text location from URL of file
 		try {
 			gsm.getGP().setBG(backgroundLoc); //Set background of GamePanel to current state background
 			init();
@@ -26,7 +26,7 @@ public class IntroState extends GameState {
 	
 	public void init() {
 		try {
-			this.br = new BufferedReader(new InputStreamReader(textLoc.openStream()));
+			this.br = new BufferedReader(new InputStreamReader(textLoc.openStream())); //Creates Buffered Reader from text file
 		} catch(Exception e){
 			e.printStackTrace();
 		}
