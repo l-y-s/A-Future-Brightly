@@ -10,7 +10,7 @@ public class HighSchoolState extends GameState {
 	public HighSchoolState(GameStateManager gsm) {
 		this.gsm = gsm;
 		this.backgroundLoc = getClass().getResource("/Backgrounds/HighSchool.jpg");
-		this.textLoc = getClass().getResource("/Texts/Intro.txt");
+		this.textLoc = getClass().getResource("/Texts/HighSchool.txt");
 	}
 	
 	public void init() {
@@ -31,7 +31,7 @@ public class HighSchoolState extends GameState {
 			outputLines(br);
 			break;
 			
-		case KeyEvent.VK_Y:
+		case KeyEvent.VK_ESCAPE:
 			System.exit(0);
 		}
 	}
