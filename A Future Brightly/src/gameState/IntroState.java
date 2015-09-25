@@ -22,7 +22,10 @@ public class IntroState extends GameState {
 		} catch(Exception e){
 			e.printStackTrace();
 		}
-		gsm.getGP().append("Welcome to \"A Future Brightly\", an Interactive Fiction game produced by Logan Schmidt\n(press Enter to scroll through text).\n");
+		gsm.getGP().append("Hi sweet girl :) This is what I've been working on for the last few weeks.\n"
+				+ "This is an Interactive Fiction game I decided to call A Future Brightly.\n"
+				+ "It won't play out like a normal game, but I still hope you like it.\n"
+				+ "From here, press ENTER to proceed through the text.\n\n");
 	}
 	
 	//Keylisteners
