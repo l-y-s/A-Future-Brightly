@@ -15,6 +15,7 @@ public class IntroState extends GameState {
 		init();
 	}
 	
+	//Initializes background and BufferedReader
 	public void init() {
 		try {
 			gsm.getGP().setBG(backgroundLoc); //Set background of GamePanel to current state background
@@ -22,6 +23,8 @@ public class IntroState extends GameState {
 		} catch(Exception e){
 			e.printStackTrace();
 		}
+		
+		//Intro text displayed on initialization
 		gsm.getGP().append("Hi sweet girl :) This is what I've been working on for the last few weeks.\n\n"
 				+ "This is an Interactive Fiction game I decided to call A Future Brightly.\n\n"
 				+ "It won't play out like a normal game, but I still hope you like it.\n\n"
@@ -37,10 +40,12 @@ public class IntroState extends GameState {
 			outputLines(br);
 			break;
 			
-		case KeyEvent.VK_Y: 		//Temporary keypress, currently used to test string appending
-			//Placeholder
+		case KeyEvent.VK_Y: 		//Starts the HighSchool GameState
 			gsm.setState(GameStateManager.HIGHSCHOOL);
 			break;
+			
+		case KeyEvent.VK_ESCAPE:
+			System.exit(0);
 		}
 	}
 	
