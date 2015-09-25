@@ -21,7 +21,7 @@ public class HighSchoolState extends GameState {
 		} catch(Exception e){
 			e.printStackTrace();
 		}
-		gsm.getGP().append("This is the HighSchoolState.\n");
+		gsm.getGP().append("The doors open. It\'s uncharacteristicly quiet, despite it being the library.\n\n");
 	}
 	
 	public void keyPressed(int k) {
