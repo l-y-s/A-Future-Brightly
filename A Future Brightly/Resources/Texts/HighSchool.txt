@@ -3,3 +3,10 @@ Classes let out, people being to file in behind you.
 You take your seat and start pulling out your homework despite the fact you probably won't finish.
 One by one, friends come in and set up around the table.
 You attempt to keep concentrating on your work, but all the banter around you makes it difficult.
+Eventually the use of a computer is necessary, you leave your friends and make your way to a kiosk.
+You saddle up to a computer a decent ways from all your friends. You settle in for a while...
+	
+	
+Despite all the hassle, you manage to get a decent amount done. It's sent off to the printers.
+You feel someone edge up next to you, but you don't pay much attention until you're about to leave.
+"Hey... I didn't get a chance to talk with you earlier, but I have something I wanted to give you."
