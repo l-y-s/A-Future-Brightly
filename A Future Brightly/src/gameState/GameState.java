@@ -23,7 +23,7 @@ public abstract class GameState {
 		try {
 			String line = br.readLine();
 			if (line != null) {
-				line = line + "\n";
+				line = line + "\n\n";
 				gsm.getGP().append(line);
 			}
 			else {
