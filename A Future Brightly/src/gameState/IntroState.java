@@ -5,6 +5,8 @@ import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+import javax.swing.JOptionPane;
+
 public class IntroState extends GameState {
 	
 	//Construct IntroState
@@ -45,7 +47,11 @@ public class IntroState extends GameState {
 			break;
 			
 		case KeyEvent.VK_ESCAPE:
-			System.exit(0);
+			int dialogButton = JOptionPane.YES_NO_OPTION;
+			int dialogResult = JOptionPane.showConfirmDialog(null,  "Really quit?", "Warning", dialogButton);
+			if (dialogResult == JOptionPane.YES_OPTION) {
+				System.exit(0);
+			}
 		}
 	}
 	
