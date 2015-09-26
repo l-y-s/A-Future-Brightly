@@ -4,8 +4,7 @@ You take your seat and start pulling out your homework despite the fact you prob
 One by one, friends come in and set up around the table.
 You attempt to keep concentrating on your work, but all the banter around you makes it difficult.
 Eventually the use of a computer is necessary, you leave your friends and make your way to a kiosk.
-You saddle up to a computer a decent ways from all your friends. You settle in for a while...
-	
+You saddle up to a computer a decent ways from all your friends. You settle in for a while...	
 	
 Despite all the hassle, you manage to get a decent amount done. It's sent off to the printers.
 You feel someone edge up next to you, but you don't pay much attention until you're about to leave.
@@ -23,3 +22,9 @@ And there it was. Timing couldn't be worse.
 "It's just that... Well, I was asked just like, an hour before..."
 The words kind of just fall out of your mouth as the uncomfortableness sinks in.
 "Oh, yeah, sure... Don't worry about it. Let me know what you think of the music."
+	
+The rest of the interaction is a blur. You're not quite sure what to do.
+It's a predicament... He's really nice, but will anything come of it...?
+Should I just play it safe? Would it be worthwhile?
+I don't know...
+Press L to listen to the CDs, or press T to play it safe.
