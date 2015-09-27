@@ -12,7 +12,7 @@ public class TProm extends GameState {
 	public TProm(GameStateManager gsm) {
 		this.gsm = gsm;
 		this.backgroundLoc = getClass().getResource("/Backgrounds/[TBD]");
-		this.textLoc = getClass().getResource("/Texts/[TBD]");
+		this.textLoc = getClass().getResource("/Texts/Prom.jpg");
 	}
 	
 	public void init() {
