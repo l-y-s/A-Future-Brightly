@@ -11,8 +11,8 @@ public class LProm extends GameState {
 	//Construct State, sets resource locations
 	public LProm(GameStateManager gsm) {
 		this.gsm = gsm;
-		this.backgroundLoc = getClass().getResource("/Backgrounds/[TBD]");
-		this.textLoc = getClass().getResource("/Texts/Prom.jpg");
+		this.backgroundLoc = getClass().getResource("/Backgrounds/Prom.jpg");
+		this.textLoc = getClass().getResource("/Texts/LProm.txt");
 	}
 	
 	public void init() {
