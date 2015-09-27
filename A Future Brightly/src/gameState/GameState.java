@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 
+import javax.swing.JOptionPane;
 import javax.swing.text.PlainDocument;
 
 //Abstract GameState
@@ -45,6 +46,14 @@ public abstract class GameState {
 			this.br = new BufferedReader(new InputStreamReader(textLoc.openStream()));
 		} catch(Exception e) {
 			e.printStackTrace();
+		}
+	}
+	
+	public void exitConfirm() {
+		int dialogButton = JOptionPane.YES_NO_OPTION;
+		int dialogResult = JOptionPane.showConfirmDialog(null, "Really quit?", "Warning", dialogButton);
+		if (dialogResult == JOptionPane.YES_OPTION) {
+			System.exit(0);
 		}
 	}
 }

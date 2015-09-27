@@ -2,7 +2,6 @@ package gameState;
 
 import java.awt.event.KeyEvent;
 
-import javax.swing.JOptionPane;
 
 public class LProm extends GameState {
 	
@@ -25,11 +24,7 @@ public class LProm extends GameState {
 			break;
 		
 		case KeyEvent.VK_ESCAPE:
-			int dialogButton = JOptionPane.YES_NO_OPTION;
-			int dialogResult = JOptionPane.showConfirmDialog(null, "Really quit?", "Warning", dialogButton);
-			if (dialogResult == JOptionPane.YES_OPTION) {
-				System.exit(0);
-			}
+			exitConfirm();
 		}
 	}
 	
