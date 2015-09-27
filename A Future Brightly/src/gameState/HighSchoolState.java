@@ -35,10 +35,18 @@ public class HighSchoolState extends GameState {
 			
 		case KeyEvent.VK_ESCAPE:
 			int dialogButton = JOptionPane.YES_NO_OPTION;
-			int dialogResult = JOptionPane.showConfirmDialog(null,  "Really quit?", "Warning", dialogButton);
+			int dialogResult = JOptionPane.showConfirmDialog(null, "Really quit?", "Warning", dialogButton);
 			if (dialogResult == JOptionPane.YES_OPTION) {
 				System.exit(0);
 			}
+		
+		case KeyEvent.VK_T:
+			gsm.setState(GameStateManager.TPROM);
+			break;
+		
+		case KeyEvent.VK_L:
+			gsm.setState(GameStateManager.LPROM);
+			break;
 		}
 	}
 	

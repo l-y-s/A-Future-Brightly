@@ -12,6 +12,8 @@ public class GameStateManager{
 	//Static int references for each GameState
 	public static final int INTROSTATE = 0;
 	public static final int HIGHSCHOOL = 1;
+	public static final int TPROM = 2;
+	public static final int LPROM = 3;
 	
 	//Construct GameStateManager
 	public GameStateManager(GamePanel textPanel){
