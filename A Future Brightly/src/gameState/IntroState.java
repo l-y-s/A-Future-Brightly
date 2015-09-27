@@ -19,12 +19,7 @@ public class IntroState extends GameState {
 	
 	//Initializes background and BufferedReader
 	public void init() {
-		try {
-			gsm.getGP().setBG(backgroundLoc); //Set background of GamePanel to current state background
-			this.br = new BufferedReader(new InputStreamReader(textLoc.openStream())); //Creates Buffered Reader from text file
-		} catch(Exception e){
-			e.printStackTrace();
-		}
+		super.init();
 		
 		//Intro text displayed on initialization
 		gsm.getGP().append("Hi sweet girl :) This is what I've been working on for the last few weeks.\n\n"

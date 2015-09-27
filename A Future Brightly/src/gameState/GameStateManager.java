@@ -24,6 +24,7 @@ public class GameStateManager{
 		//Instantiate each GameState on creation (may need to changed to handle dynamic creation due to branching)
 		gameStates.add(new IntroState(this)); //0
 		gameStates.add(new HighSchoolState(this));
+		gameStates.add(new TProm(this));
 	}
 	
 	//Setter for changing GameStates

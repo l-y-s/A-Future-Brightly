@@ -16,13 +16,8 @@ public class TProm extends GameState {
 	}
 	
 	public void init() {
-		try {
-			clearPanel();
-			gsm.getGP().setBG(backgroundLoc);
-			this.br = new BufferedReader(new InputStreamReader(textLoc.openStream()));
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
+		super.init();
+		gsm.getGP().append("Test");
 	}
 	
 	public void keyPressed(int k) {

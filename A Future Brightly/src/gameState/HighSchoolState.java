@@ -16,13 +16,7 @@ public class HighSchoolState extends GameState {
 	}
 	
 	public void init() {
-		try {
-			clearPanel(); //Clears GamePanel
-			gsm.getGP().setBG(backgroundLoc); //Sets background of GamePanel
-			this.br = new BufferedReader(new InputStreamReader(textLoc.openStream())); //Initialize BufferedReader
-		} catch(Exception e){
-			e.printStackTrace();
-		}
+		super.init();
 		gsm.getGP().append("The doors open. It\'s uncharacteristicly quiet, despite it being the library.\n\n");
 	}
 	

@@ -1,6 +1,7 @@
 package gameState;
 
 import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.net.URL;
 
 import javax.swing.text.PlainDocument;
@@ -15,7 +16,6 @@ public abstract class GameState {
 	protected URL textLoc; //Stores location of GameState text file
 	protected BufferedReader br; 
 	
-	public abstract void init();
 	public abstract void keyPressed(int k);
 	public abstract void keyReleased(int k);
 	
@@ -36,5 +36,15 @@ public abstract class GameState {
 	
 	public void clearPanel() {
 		gsm.getGP().setDocument(new PlainDocument());
+	}
+	
+	public void init() {
+		try {
+			clearPanel();
+			gsm.getGP().setBG(backgroundLoc);
+			this.br = new BufferedReader(new InputStreamReader(textLoc.openStream()));
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
