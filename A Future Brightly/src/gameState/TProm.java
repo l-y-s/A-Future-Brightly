@@ -11,19 +11,21 @@ public class TProm extends GameState {
 		this.textLoc = getClass().getResource("/Texts/TProm.txt");
 	}
 	
+	//Initializes the state
 	public void init() {
-		super.init();
+		super.init();	//Calls superclass initializer
 		gsm.getGP().append("Test");
 	}
 	
 	public void keyPressed(int k) {
 		switch(k) {
+		
 		case KeyEvent.VK_ENTER:
-			outputLines(br);
+			outputLines(br);	//Read in a line and append to GamePanel
 			break;
 		
 		case KeyEvent.VK_ESCAPE:
-			exitConfirm();
+			exitConfirm();		//Open confirmation dialog on close
 		}
 	}
 	

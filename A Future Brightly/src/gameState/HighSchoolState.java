@@ -11,8 +11,9 @@ public class HighSchoolState extends GameState {
 		this.textLoc = getClass().getResource("/Texts/HighSchool.txt");
 	}
 	
+	//Initializes the state and sets the first line on the GamePanel
 	public void init() {
-		super.init();
+		super.init();	//Calls superclass initializer
 		gsm.getGP().append("The doors open. It\'s uncharacteristicly quiet, despite it being the library.\n\n");
 	}
 	
@@ -20,18 +21,18 @@ public class HighSchoolState extends GameState {
 		switch(k) {
 		
 		case KeyEvent.VK_ENTER:
-			outputLines(br);
+			outputLines(br);	//Read in one line and append to GamePanel
 			break;
 			
 		case KeyEvent.VK_ESCAPE:
-			exitConfirm();
+			exitConfirm();		//Open confirmation dialog on close
 		
 		case KeyEvent.VK_T:
-			gsm.setState(GameStateManager.TPROM);
+			gsm.setState(GameStateManager.TPROM);	//Change to TProm state
 			break;
 		
 		case KeyEvent.VK_L:
-			gsm.setState(GameStateManager.LPROM);
+			gsm.setState(GameStateManager.LPROM);	//Change to LProm state
 			break;
 		}
 	}
