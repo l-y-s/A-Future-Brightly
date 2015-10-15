@@ -80,7 +80,7 @@ public class GamePanel extends JEditorPane implements KeyListener {
 	}
 	
 	public void keyPressed(KeyEvent key){
-		key.consume();
+		key.consume();	//Prevents warning sound when pressing special keys during gameplay
 		gsm.keyPressed(key.getKeyCode());
 	}
 	
