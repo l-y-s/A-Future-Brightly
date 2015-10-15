@@ -1,10 +1,8 @@
 package main;
 
-//Allows for manipulation of files
-import java.io.File;
-import java.io.IOException;
+import java.net.URL;
 
-import javax.imageio.ImageIO;	//Allows for image IO for backgrounds and icons
+import javax.swing.ImageIcon;
 import javax.swing.JFrame; //Allows for creation of JFrame
 import javax.swing.JScrollPane;
 
@@ -12,6 +10,7 @@ public class Game{
 	
 	public static void main(String[] args){
 		JFrame window = new JFrame("A Future Brightly"); //Creates new JFrame
+		URL iconURL = Game.class.getResource("/Icons/Heart.png");
 		
 		//Creates new GamePanel sets properties
 		GamePanel textPanel = new GamePanel();
@@ -28,9 +27,10 @@ public class Game{
 		
 		//Sets window icon
 		try{
-			window.setIconImage(ImageIO.read(new File("Resources/Icons/Heart.png")));
+			ImageIcon icon = new ImageIcon(iconURL);
+			window.setIconImage(icon.getImage());
 		}
-		catch(IOException e){
+		catch(Exception e){
 			e.printStackTrace();
 		}
 		window.setVisible(true); //Makes window visible

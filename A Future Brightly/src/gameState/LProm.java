@@ -2,7 +2,6 @@ package gameState;
 
 import java.awt.event.KeyEvent;
 
-
 public class LProm extends GameState {
 	
 	//Construct State, sets resource locations
