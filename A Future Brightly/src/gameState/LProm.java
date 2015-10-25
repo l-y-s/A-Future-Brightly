@@ -15,7 +15,7 @@ public class LProm extends GameState {
 	public void init() {
 
 		super.init();	//Calls superclass initializer. 
-		gsm.getGP().append("Well, the big night is here.");
+		gsm.getGP().append("Well, the big night is here.\n\n");
 	}
 	
 	public void keyPressed(int k) {
