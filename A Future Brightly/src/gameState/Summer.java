@@ -2,19 +2,19 @@ package gameState;
 
 import java.awt.event.KeyEvent;
 
-public class TProm extends GameState {
+public class Summer extends GameState {
 	
-	//Construct State, sets resource locations
-	public TProm(GameStateManager gsm) {
+	//Constructs State, sets resource locations
+	public Summer(GameStateManager gsm) {
 		this.gsm = gsm;
-		this.backgroundLoc = getClass().getResource("/Backgrounds/Prom.png");
-		this.textLoc = getClass().getResource("/Texts/TProm.txt");
+		this.backgroundLoc = getClass().getResource("/Backgrounds/Summer.jpg");
+		this.textLoc = getClass().getResource("/Texts/Summer.txt");
 	}
 	
 	//Initializes the state
 	public void init() {
 		super.init();	//Calls superclass initializer
-		gsm.getGP().append("Well, the big night is here.\n\n");
+		gsm.getGP().append("The rest of the school year flew by.\n\n");
 	}
 	
 	public void keyPressed(int k) {
@@ -23,16 +23,10 @@ public class TProm extends GameState {
 		case KeyEvent.VK_ENTER:
 			outputLines(br);	//Read in a line and append to GamePanel
 			break;
-		
+			
 		case KeyEvent.VK_ESCAPE:
 			exitConfirm();		//Open confirmation dialog on close
-		
-		case KeyEvent.VK_C:
-			gsm.setState(GameStateManager.SUMMER);
-			break;
 		}
-		
-			
 	}
 	
 	public void keyReleased(int k) {}

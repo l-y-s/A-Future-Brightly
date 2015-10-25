@@ -27,6 +27,10 @@ public class LProm extends GameState {
 		
 		case KeyEvent.VK_ESCAPE:
 			exitConfirm();	//Open confirmation dialog on close
+			
+		case KeyEvent.VK_C:
+			gsm.setState(GameStateManager.SUMMER);
+			break;
 		}
 	}
 	

@@ -14,6 +14,7 @@ public class GameStateManager{
 	public static final int HIGHSCHOOL = 1;
 	public static final int TPROM = 2;
 	public static final int LPROM = 3;
+	public static final int SUMMER = 4;
 	
 	//Construct GameStateManager
 	public GameStateManager(GamePanel textPanel){
@@ -26,6 +27,7 @@ public class GameStateManager{
 		gameStates.add(new HighSchoolState(this)); //1
 		gameStates.add(new TProm(this)); //2
 		gameStates.add(new LProm(this)); //3
+		gameStates.add(new Summer(this)); //4
 	}
 	
 	//Setter for changing GameStates
