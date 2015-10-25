@@ -27,4 +27,4 @@ The rest of the interaction is a blur. You're not quite sure what to do.
 It's a predicament... He's really nice, but will anything come of it...?
 Should I just play it safe? Would it be worthwhile?
 I don't know...
-Press L to listen to the CDs, or press T to play it safe.
+Press [L] to listen to the CDs, or press [T] to play it safe.
