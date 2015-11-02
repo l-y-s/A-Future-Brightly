@@ -17,8 +17,8 @@ import gameState.GameStateManager;
 public class GamePanel extends JEditorPane implements KeyListener {
 	
 	//Static window dimensions
-	public static final int WIDTH = 425;
-	public static final int HEIGHT = 300;
+	public static final int WIDTH = 485;
+	public static final int HEIGHT = 325;
 	public static final int SCALE = 2;
 	
 	private URL background; //Stores background location
