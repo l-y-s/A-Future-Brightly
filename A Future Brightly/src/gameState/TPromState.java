@@ -28,8 +28,10 @@ public class TPromState extends GameState {
 			exitConfirm();		//Open confirmation dialog on close
 		
 		case KeyEvent.VK_C:
-			gsm.setState(GameStateManager.SUMMER);
-			break;
+			//if(this.choiceTime == true) {
+				gsm.setState(GameStateManager.SUMMER);
+				break;
+			//} else {break;}
 		}
 		
 			

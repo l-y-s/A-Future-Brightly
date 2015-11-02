@@ -28,12 +28,16 @@ public class HighSchoolState extends GameState {
 			exitConfirm();		//Open confirmation dialog on close
 		
 		case KeyEvent.VK_T:
-			gsm.setState(GameStateManager.TPROM);	//Change to TProm state
-			break;
+			//if(this.choiceTime == true) {
+				gsm.setState(GameStateManager.TPROM);	//Change to TProm state
+				break;
+			//} else {break;}
 		
 		case KeyEvent.VK_L:
-			gsm.setState(GameStateManager.LPROM);	//Change to LProm state
-			break;
+			//if (this.choiceTime == true) {
+				gsm.setState(GameStateManager.LPROM);	//Change to LProm state
+				break;
+			//} else {break;}
 		}
 	}
 	

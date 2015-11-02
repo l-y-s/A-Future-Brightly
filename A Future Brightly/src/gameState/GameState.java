@@ -17,6 +17,8 @@ public abstract class GameState {
 	protected URL textLoc; //Stores location of GameState text file
 	protected BufferedReader br; 
 	
+	protected boolean choiceTime = false;
+	
 	public abstract void keyPressed(int k);
 	public abstract void keyReleased(int k);
 	
@@ -28,6 +30,7 @@ public abstract class GameState {
 				gsm.getGP().append(line);
 			}
 			else {
+				choiceTime = true;
 				br.close();
 			}
 		} catch (Exception e) {
