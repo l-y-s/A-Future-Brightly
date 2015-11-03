@@ -34,10 +34,10 @@ public class SummerState extends GameState {
 			//} else {break;}
 			
 		case KeyEvent.VK_B:
-			if(this.choiceTime == true) {
+			//if(this.choiceTime == true) {
 				gsm.setState(GameStateManager.BREAKUP);
 				break;
-			} else {break;}
+			//} else {break;}
 		}
 	}
 	

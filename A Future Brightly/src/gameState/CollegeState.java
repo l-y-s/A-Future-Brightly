@@ -25,6 +25,18 @@ public class CollegeState extends GameState {
 			
 		case KeyEvent.VK_ESCAPE:
 			exitConfirm();
+			
+		case KeyEvent.VK_M:
+			//if (choiceTime == true){
+				gsm.setState(GameStateManager.ESTABLISHMENT);
+				break;
+			//} else {break;}
+		
+		case KeyEvent.VK_B:
+			//if(this.choiceTime == true) {
+			gsm.setState(GameStateManager.BREAKUP);
+			break;
+		//} else {break;}
 		}
 	}
 	
