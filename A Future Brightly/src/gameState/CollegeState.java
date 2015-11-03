@@ -13,7 +13,7 @@ public class CollegeState extends GameState {
 	
 	public void init() {
 		super.init();
-		gsm.getGP().append("Finally, you've made it to college.");
+		gsm.getGP().append("Finally, you've made it to college.\n\n");
 	}
 	
 	public void keyPressed(int k) {
