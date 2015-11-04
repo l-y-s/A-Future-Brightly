@@ -7,13 +7,13 @@ public class BreakupState extends GameState {
 	//Constructs BreakupState, sets resource locations
 	public BreakupState(GameStateManager gsm) {
 		this.gsm = gsm;
-		this.backgroundLoc = getClass().getResource("TBD");
-		this.textLoc = getClass().getResource("TBD");
+		this.backgroundLoc = getClass().getResource("/Backgrounds/Breakup.png");
+		this.textLoc = getClass().getResource("/Texts/Breakup.txt");
 	}
 	
 	public void init() {
 		super.init();
-		gsm.getGP().append("TBD");
+		gsm.getGP().append("Sometimes things don't work out.\n\n");
 	}
 	
 	public void keyPressed(int k) {
@@ -25,6 +25,12 @@ public class BreakupState extends GameState {
 			
 		case KeyEvent.VK_ESCAPE:
 			exitConfirm();
+			
+		case KeyEvent.VK_E:
+			//if(choiceTime == true) {
+				gsm.setState(GameStateManager.OUTRO);
+				break;
+			//} else {break;}
 		}
 	}
 	
