@@ -17,6 +17,7 @@ public class Game{
 		textPanel.setEditable(false);
 		
 		JScrollPane scroll = new JScrollPane(textPanel); //Creates new JScrollPane to allow GamePanel to scroll
+		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		
 		//Set JFrame properties
 		window.setContentPane(scroll);

@@ -25,6 +25,18 @@ public class EstablishmentState extends GameState {
 			
 		case KeyEvent.VK_ESCAPE:
 			exitConfirm();
+			
+		case KeyEvent.VK_M:
+			//if (choiceTime == true){
+				gsm.setState(GameStateManager.MARRIAGE);
+				break;
+			//} else {break;}
+		
+		case KeyEvent.VK_K:
+			//if (choiceTime == true){
+				gsm.setState(GameStateManager.KIDS);
+				break;
+			//} else {break;}
 		}
 	}
 	

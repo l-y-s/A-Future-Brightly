@@ -26,7 +26,7 @@ public class CollegeState extends GameState {
 		case KeyEvent.VK_ESCAPE:
 			exitConfirm();
 			
-		case KeyEvent.VK_M:
+		case KeyEvent.VK_E:
 			//if (choiceTime == true){
 				gsm.setState(GameStateManager.ESTABLISHMENT);
 				break;
