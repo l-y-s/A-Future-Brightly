@@ -25,6 +25,12 @@ public class MajorEventsState extends GameState {
 			
 		case KeyEvent.VK_ESCAPE:
 			exitConfirm();
+			
+		case KeyEvent.VK_H:
+			//if (choiceTime == true){
+			gsm.setState(GameStateManager.HAPPINESS);
+			break;
+		//} else {break;}
 		}
 	}
 	

@@ -25,6 +25,18 @@ public class MarriageState extends GameState {
 			
 		case KeyEvent.VK_ESCAPE:
 			exitConfirm();
+			
+		case KeyEvent.VK_K:
+			//if (choiceTime == true){
+			gsm.setState(GameStateManager.KIDS);
+			break;
+		//} else {break;}
+			
+		case KeyEvent.VK_S:
+			//if (choiceTime == true){
+			gsm.setState(GameStateManager.HAPPINESS);
+			break;
+		//} else {break;}
 		}
 	}
 	
