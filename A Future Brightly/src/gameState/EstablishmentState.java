@@ -37,6 +37,12 @@ public class EstablishmentState extends GameState {
 				gsm.setState(GameStateManager.KIDS);
 				break;
 			//} else {break;}
+				
+		case KeyEvent.VK_S:
+			//if (choiceTime == true){
+			gsm.setState(GameStateManager.HAPPINESS);
+			break;
+		//} else {break;}
 		}
 	}
 	
