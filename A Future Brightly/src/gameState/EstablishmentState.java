@@ -13,7 +13,7 @@ public class EstablishmentState extends GameState {
 	
 	public void init() {
 		super.init();
-		gsm.getGP().append("You throw open the door, exhausted.\n\n");
+		gsm.getGP().append("You throw open the door, worn out.\n\n");
 	}
 	
 	public void keyPressed(int k) {
