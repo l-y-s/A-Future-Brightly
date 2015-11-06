@@ -7,13 +7,13 @@ public class EstablishmentState extends GameState {
 	//Constructs BreakupState, sets resource locations
 	public EstablishmentState(GameStateManager gsm) {
 		this.gsm = gsm;
-		this.backgroundLoc = getClass().getResource("TBD");
-		this.textLoc = getClass().getResource("TBD");
+		this.backgroundLoc = getClass().getResource("/Backgrounds/Establishment.png");
+		this.textLoc = getClass().getResource("/Texts/Establishment.txt");
 	}
 	
 	public void init() {
 		super.init();
-		gsm.getGP().append("TBD");
+		gsm.getGP().append("You throw open the door, exhausted.\n\n");
 	}
 	
 	public void keyPressed(int k) {
