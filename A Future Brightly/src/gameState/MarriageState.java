@@ -7,8 +7,8 @@ public class MarriageState extends GameState {
 	//Constructs BreakupState, sets resource locations
 	public MarriageState(GameStateManager gsm) {
 		this.gsm = gsm;
-		this.backgroundLoc = getClass().getResource("TBD");
-		this.textLoc = getClass().getResource("TBD");
+		this.backgroundLoc = getClass().getResource("/Backgrounds/Marriage.jpg");
+		this.textLoc = getClass().getResource("/Texts/Marriage.txt");
 	}
 	
 	public void init() {
