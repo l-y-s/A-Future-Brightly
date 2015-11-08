@@ -13,7 +13,7 @@ public class MarriageState extends GameState {
 	
 	public void init() {
 		super.init();
-		gsm.getGP().append("TBD");
+		gsm.getGP().append("\"We're gathered here today to celebrate the love between two people...\"\n\n");
 	}
 	
 	public void keyPressed(int k) {
