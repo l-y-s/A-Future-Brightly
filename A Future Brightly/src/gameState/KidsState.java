@@ -7,13 +7,13 @@ public class KidsState extends GameState {
 	//Constructs BreakupState, sets resource locations
 	public KidsState(GameStateManager gsm) {
 		this.gsm = gsm;
-		this.backgroundLoc = getClass().getResource("TBD");
-		this.textLoc = getClass().getResource("TBD");
+		this.backgroundLoc = getClass().getResource("/Backgrounds/Kids.jpg");
+		this.textLoc = getClass().getResource("/Texts/Kids.txt");
 	}
 	
 	public void init() {
 		super.init();
-		gsm.getGP().append("TBD");
+		gsm.getGP().append("You hear the loud cries and finally the pain subsides.\n\n");
 	}
 	
 	public void keyPressed(int k) {
