@@ -13,7 +13,7 @@ public class MajorEventsState extends GameState {
 	
 	public void init() {
 		super.init();
-		gsm.getGP().append("TBD");
+		gsm.getGP().append("Life flies by now.\n\n");
 	}
 	
 	public void keyPressed(int k) {
