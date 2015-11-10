@@ -2,10 +2,10 @@ package gameState;
 
 import java.awt.event.KeyEvent;
 
-public class MajorEventsState extends GameState {
+public class Happiness2State extends GameState {
 	
 	//Constructs BreakupState, sets resource locations
-	public MajorEventsState(GameStateManager gsm) {
+	public Happiness2State(GameStateManager gsm) {
 		this.gsm = gsm;
 		this.backgroundLoc = getClass().getResource("TBD");
 		this.textLoc = getClass().getResource("TBD");
@@ -25,12 +25,6 @@ public class MajorEventsState extends GameState {
 			
 		case KeyEvent.VK_ESCAPE:
 			exitConfirm();
-			
-		case KeyEvent.VK_H:
-			//if (choiceTime == true){
-			gsm.setState(GameStateManager.HAPPINESS2);
-			break;
-		//} else {break;}
 		}
 	}
 	

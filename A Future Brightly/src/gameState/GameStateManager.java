@@ -21,8 +21,9 @@ public class GameStateManager{
 	public static final int MARRIAGE = 8;
 	public static final int KIDS = 9;
 	public static final int MAJOREVENTS = 10;
-	public static final int HAPPINESS = 11;
-	public static final int OUTRO = 12;
+	public static final int HAPPINESS1 = 11;
+	public static final int HAPPINESS2 = 12;
+	public static final int OUTRO = 13;
 	
 	//Construct GameStateManager
 	public GameStateManager(GamePanel textPanel){
@@ -42,7 +43,8 @@ public class GameStateManager{
 		gameStates.add(new MarriageState(this));
 		gameStates.add(new KidsState(this));
 		gameStates.add(new MajorEventsState(this));
-		gameStates.add(new HappinessState(this));
+		gameStates.add(new Happiness1State(this));
+		gameStates.add(new Happiness2State(this));
 		gameStates.add(new OutroState(this));
 	}
 	

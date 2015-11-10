@@ -40,7 +40,7 @@ public class EstablishmentState extends GameState {
 				
 		case KeyEvent.VK_S:
 			//if (choiceTime == true){
-			gsm.setState(GameStateManager.HAPPINESS);
+			gsm.setState(GameStateManager.HAPPINESS1);
 			break;
 		//} else {break;}
 		}
