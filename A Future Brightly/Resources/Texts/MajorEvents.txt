@@ -14,3 +14,5 @@ Colleges beg for their attendance. They get to go exactly where they want and co
 You live in an amazing area, in a custom-built house.
 You take many incredible vacations, pursue your various hobbies, and stay close to family.
 And life is good all the while.
+
+Press [H] to continue.
