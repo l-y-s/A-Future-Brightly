@@ -34,10 +34,10 @@ public class IntroState extends GameState {
 			break;
 			
 		case KeyEvent.VK_Y: 		//Starts the HighSchool GameState
-			//if(this.choiceTime == true) {
+			if(this.choiceTime == true) {
 				gsm.setState(GameStateManager.HIGHSCHOOL);
 				break;
-			//} else {break;}
+			} else {break;}
 			
 		case KeyEvent.VK_ESCAPE:
 			exitConfirm();

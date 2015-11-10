@@ -27,10 +27,10 @@ public class KidsState extends GameState {
 			exitConfirm();
 			
 		case KeyEvent.VK_L:
-			//if (choiceTime == true){
-			gsm.setState(GameStateManager.MAJOREVENTS);
-			break;
-		//} else {break;}
+			if (choiceTime == true){
+				gsm.setState(GameStateManager.MAJOREVENTS);
+				break;
+			} else {break;}
 		}
 	}
 	

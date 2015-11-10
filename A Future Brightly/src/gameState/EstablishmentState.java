@@ -27,22 +27,22 @@ public class EstablishmentState extends GameState {
 			exitConfirm();
 			
 		case KeyEvent.VK_M:
-			//if (choiceTime == true){
+			if (choiceTime == true){
 				gsm.setState(GameStateManager.MARRIAGE);
 				break;
-			//} else {break;}
+			} else {break;}
 		
 		case KeyEvent.VK_K:
-			//if (choiceTime == true){
+			if (choiceTime == true){
 				gsm.setState(GameStateManager.KIDS);
 				break;
-			//} else {break;}
+			} else {break;}
 				
 		case KeyEvent.VK_S:
-			//if (choiceTime == true){
-			gsm.setState(GameStateManager.HAPPINESS1);
-			break;
-		//} else {break;}
+			if (choiceTime == true){
+				gsm.setState(GameStateManager.HAPPINESS1);
+				break;
+			} else {break;}
 		}
 	}
 	

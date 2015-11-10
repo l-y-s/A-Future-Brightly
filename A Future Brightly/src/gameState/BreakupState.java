@@ -27,10 +27,10 @@ public class BreakupState extends GameState {
 			exitConfirm();
 			
 		case KeyEvent.VK_E:
-			//if(choiceTime == true) {
+			if(choiceTime == true) {
 				gsm.setState(GameStateManager.OUTRO);
 				break;
-			//} else {break;}
+			} else {break;}
 		}
 	}
 	

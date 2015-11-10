@@ -27,8 +27,10 @@ public class Happiness2State extends GameState {
 			exitConfirm();
 			
 		case KeyEvent.VK_O:
-			gsm.setState(GameStateManager.OUTRO);
-			break;
+			if(choiceTime == true) {
+				gsm.setState(GameStateManager.OUTRO);
+				break;
+			} else{break;}
 		}
 	}
 	

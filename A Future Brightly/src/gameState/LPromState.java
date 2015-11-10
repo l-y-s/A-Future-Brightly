@@ -29,10 +29,10 @@ public class LPromState extends GameState {
 			exitConfirm();	//Open confirmation dialog on close
 			
 		case KeyEvent.VK_C:
-			//if (this.choiceTime == true) {
+			if (this.choiceTime == true) {
 				gsm.setState(GameStateManager.SUMMER);
 				break;
-			//} else {break;}
+			} else {break;}
 		}
 	}
 	

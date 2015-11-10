@@ -28,16 +28,16 @@ public class SummerState extends GameState {
 			exitConfirm();		//Open confirmation dialog on close
 		
 		case KeyEvent.VK_R:
-			//if(this.choiceTime == true) {
+			if(this.choiceTime == true) {
 				gsm.setState(GameStateManager.COLLEGE);
 				break;
-			//} else {break;}
+			} else {break;}
 			
 		case KeyEvent.VK_B:
-			//if(this.choiceTime == true) {
+			if(this.choiceTime == true) {
 				gsm.setState(GameStateManager.BREAKUP);
 				break;
-			//} else {break;}
+			} else {break;}
 		}
 	}
 	
