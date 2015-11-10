@@ -7,8 +7,8 @@ public class MajorEventsState extends GameState {
 	//Constructs BreakupState, sets resource locations
 	public MajorEventsState(GameStateManager gsm) {
 		this.gsm = gsm;
-		this.backgroundLoc = getClass().getResource("TBD");
-		this.textLoc = getClass().getResource("TBD");
+		this.backgroundLoc = getClass().getResource("/Backgrounds/MajorEvents.jpg");
+		this.textLoc = getClass().getResource("/Texts/MajorEvents.txt");
 	}
 	
 	public void init() {

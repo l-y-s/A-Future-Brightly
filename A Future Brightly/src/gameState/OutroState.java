@@ -7,8 +7,8 @@ public class OutroState extends GameState {
 	//Constructs BreakupState, sets resource locations
 	public OutroState(GameStateManager gsm) {
 		this.gsm = gsm;
-		this.backgroundLoc = getClass().getResource("TBD");
-		this.textLoc = getClass().getResource("TBD");
+		this.backgroundLoc = getClass().getResource("/Backgrounds/Outro.jpg");
+		this.textLoc = getClass().getResource("/Texts/Outro.txt");
 	}
 	
 	public void init() {

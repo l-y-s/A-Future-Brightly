@@ -7,8 +7,8 @@ public class Happiness2State extends GameState {
 	//Constructs BreakupState, sets resource locations
 	public Happiness2State(GameStateManager gsm) {
 		this.gsm = gsm;
-		this.backgroundLoc = getClass().getResource("TBD");
-		this.textLoc = getClass().getResource("TBD");
+		this.backgroundLoc = getClass().getResource("/Backgrounds/Happiness.jpg");
+		this.textLoc = getClass().getResource("/Texts/Happiness2.txt");
 	}
 	
 	public void init() {
@@ -25,6 +25,10 @@ public class Happiness2State extends GameState {
 			
 		case KeyEvent.VK_ESCAPE:
 			exitConfirm();
+			
+		case KeyEvent.VK_O:
+			gsm.setState(GameStateManager.OUTRO);
+			break;
 		}
 	}
 	
