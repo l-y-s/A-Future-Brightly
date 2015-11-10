@@ -13,7 +13,7 @@ public class Happiness1State extends GameState {
 	
 	public void init() {
 		super.init();
-		gsm.getGP().append("TBD");
+		gsm.getGP().append("The sun begins descending, casting long shadows over the yard.\n\n");
 	}
 	
 	public void keyPressed(int k) {

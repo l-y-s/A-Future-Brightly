@@ -13,7 +13,7 @@ public class OutroState extends GameState {
 	
 	public void init() {
 		super.init();
-		gsm.getGP().append("TBD");
+		gsm.getGP().append("And that's the end of it :)");
 	}
 	
 	public void keyPressed(int k) {
